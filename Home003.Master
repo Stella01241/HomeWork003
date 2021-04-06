@@ -1,0 +1,183 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home003.master.cs" Inherits="HomeWork003.Home003" %>
+
+<%@ Register Src="~/usHeader.ascx" TagPrefix="uc1" TagName="usHeader" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .FormArea {
+            height: 100%;
+        }
+
+        #Header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            /*text-align: center;*/
+            font-size: 15px;
+            color: #fffaf3;
+            font-weight: bold;
+            background-color: #F8C3CD;
+        }
+
+        #Sidebar {
+            width: 140px;
+            float: left;
+            min-height: 74%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 15px;
+            color: #f9c81e;
+            font-weight: bold;
+            background-color: #0C0C0C;
+            float: left;
+        }
+
+        #Sidebar a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+            }
+
+        #body {
+            background: rgba(201, 76, 76, 0.3);
+        }
+
+        #Footer {
+            width: 100%;
+            /*height: 10%;*/
+            /*text-align: center;*/
+            line-height: 20px;
+            font-size: 15px;
+            color: #FAD689;
+            font-weight: bold;
+            background-color: #EB7A77;
+            display: flex;
+        }
+
+        .Header {
+            font-size: 50px;
+            margin: 0 auto;
+        }
+
+        .FooterP {
+            margin: 0 0 2px 0;
+        }
+
+        .copyright {
+            text-align: right;
+        }
+
+        .asda {
+            margin: 0 auto;
+        }
+
+        .zzz {
+            margin-top: 30px;
+            transform: translateY(-50%);
+        }
+
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 70.6%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 60px;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 28px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <form class="FormArea" id="form1" runat="server">
+        <div id="Header">
+            <uc1:usHeader runat="server" ID="usHeader" />
+        </div>
+
+
+        <div id="Sidebar">
+            <a href="#about">Search</a>
+            <a href="#services">Create</a>
+            <a href="#clients">Delete</a>
+            <a href="#contact">Edit</a>
+        </div>
+        <div id="Body">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="clear: both;"></div>
+        <div id="Footer">
+            <div>
+                <p class="FooterP">Copy right xxxx有限公司2021 </p>
+                <p class="FooterP">電子郵件:xxx@xxx.com.tw </p>
+                <p class="FooterP">高雄辦公室:07-xxxxx  地址:xxxxxxxxxx </p>
+                <p class="FooterP">台北辦公室:02-xxxxx  地址:xxxxxxxxxx </p>
+            </div>
+
+
+            <div class="copyright">
+                <p class="FooterP"><a href="https://law.moj.gov.tw/Service/Privacy.aspx">隱私宣告連結</a></p>
+                <p class="FooterP"><a href="https://www.youtube.com/">資料保護宣告連結</a></p>
+            </div>
+        </div>
+
+        <%--<div class="sidenav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>--%>
+
+    </form>
+</body>
+</html>
